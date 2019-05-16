@@ -49,19 +49,15 @@ namespace api.Controllers
               item);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMoviesItem,(short id, Movies item)
-        {
-            if (id != item.id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(item).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return Content("Movie has been updated");
-        }
+        [HttpPut ("{id}")]
+         public async Task<IActionResult> PutTodoItem (int id, Movies item) {
+         if (id != item.Id) {
+         return BadRequest ();
+         }
+         _context.Entry (item).State = EntityState.Modified;
+         await _context.SaveChangesAsync ();
+         return Content ("Movie has been updated");
+         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMoviesItem(short id)
