@@ -29,7 +29,7 @@ namespace api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // Connect to DB
-            string connection = "Server=localhost;Database=Rugby7db;User=sa;Password=yourStrong(*)Password;";
+            string connection = "Server=localhost;Database=DB_6215_19_S1;User=sa;Password=yourStrong(*)Password;";
 
             services.AddDbContext<MoviesContext>(options => options
                     .UseSqlServer(connection)
