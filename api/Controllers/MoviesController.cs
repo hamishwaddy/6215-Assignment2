@@ -26,7 +26,7 @@ namespace api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Movies>> GetMovies(long id)
+        public async Task<ActionResult<Movies>> GetMovies(int id)
         {   
             Movies item = await _context.Movies.FindAsync(id);
 
