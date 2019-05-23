@@ -1,19 +1,32 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "API page";
+    ViewData["Title"] = "API Page";
     ViewData["ApiType"] = "Movies data";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<h2>@ViewData[ApiType]</h2>
+<h2>@ViewData["ApiType"]</h2>
 
 <div id="data">
     <ul>
 
     </ul>
 </div>
+
+<script>
+    fetch("http://localhost:5000/api/users")
+    .then(res => res.json())
+    .then(data => {
+
+        let players = data.map(d => `
+            <li>${d.name}</li>
+        `)
+
+        document.querySelector("#data > ul").innerHTML = users
+    })
+</script>
 
 
 <!-- 
