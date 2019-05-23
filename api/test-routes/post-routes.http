@@ -1,10 +1,10 @@
-POST http://localhost:5000/api/users
-content-type: application/json
+# POST http://localhost:5000/api/users
+# content-type: application/json
 
-{
-  "Fname":"Stephen",
-  "Lname":"Holland",
-  "Uname":"s.holland",
-  "Passwrd":"1234",
-  "Email":"s.holland@gmail.com",
-}
+# {
+#   "Fname":"John",
+#   "Lname":"Key",
+#   "Uname":"johnkey",
+#   "Passwrd":"1234",
+#   "Email":"j.key@gmail.com",
+# }

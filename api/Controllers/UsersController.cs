@@ -60,7 +60,7 @@ namespace api.Controllers
          }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUsersItem(short id)
+        public async Task<IActionResult> DeleteUsersItem(int id)
         {
             Users model = await _context.Users.FindAsync(id);
 
