@@ -28,6 +28,11 @@ namespace api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddCors(c =>  
+            {  
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());  
+            });  
+
             // Connect to DB
             string connection = "Server=localhost;Database=DB_6215_19_S1;User=sa;Password=yourStrong(*)Password;";
 
@@ -45,6 +50,8 @@ namespace api
             }
 
             app.UseMvc();
+
+            app.UseCors(options => options.AllowAnyOrigin());
         }
     }
 }
