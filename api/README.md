@@ -8,6 +8,8 @@ dotnet ef dbcontext scaffold "Server=localhost;Database=DB_6215_19_S1;User=sa;Pa
 ```
 
 ### **NEXT STEPS**
-https://docs.jwk.nz/dotnet_core/sqlsvr_webapi/dotnet-2.1.x/04-testing-the-api/
-Test API routes using VS Code and/or Postman using this link.
+open new wpf project in Visual Studio. 
+Go to 'packages' & search NUGET for Newtonsoft package. 
+Add to project and add 'using Newtonsoft;' statement. 
+Localhost/5000/api/.... will be the source of the JSON data.
 

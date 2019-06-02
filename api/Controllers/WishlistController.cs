@@ -26,7 +26,7 @@ namespace api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Wishlist>> GetWishlist(long id)
+        public async Task<ActionResult<Wishlist>> GetWishlist(int id)
         {   
             Wishlist item = await _context.Wishlist.FindAsync(id);
 
@@ -60,7 +60,7 @@ namespace api.Controllers
          }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteWishlistItem(short id)
+        public async Task<IActionResult> DeleteWishlistItem(int id)
         {
             Wishlist model = await _context.Wishlist.FindAsync(id);
 
@@ -72,7 +72,7 @@ namespace api.Controllers
             _context.Wishlist.Remove(model);
             await _context.SaveChangesAsync();
 
-            return Content("Wishlist has been removed");
+            return Content("Wishlist item has been removed");
         }
     }
 }
